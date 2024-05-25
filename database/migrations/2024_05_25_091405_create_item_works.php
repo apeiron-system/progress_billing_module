@@ -18,8 +18,8 @@ class CreateItemWorks extends Migration
             $table->text('item_works');
             $table->timestamps();
 
-            $table->unsignedBigInteger('iw_job_order_no');
-            $table->foreign('iw_job_order_no')->references('job_order_no')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('iw_job_order_id');
+            $table->foreign('iw_job_order_id')->references('job_order_id')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
 
             $table->unsignedBigInteger('iw_contract_id');
             $table->foreign('iw_contract_id')->references('contract_id')->on('contract')->onDelete('cascade')->onUpdate('cascade');

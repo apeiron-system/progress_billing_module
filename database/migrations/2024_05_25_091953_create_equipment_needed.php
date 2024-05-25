@@ -18,8 +18,8 @@ class CreateEquipmentNeeded extends Migration
             $table->string('equipment_name');
             $table->timestamps();
 
-            $table->unsignedBigInteger('en_job_order_no');
-            $table->foreign('en_job_order_no')->references('job_order_no')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('en_job_order_id');
+            $table->foreign('en_job_order_id')->references('job_order_id')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
 
             $table->unsignedBigInteger('en_contract_id');
             $table->foreign('en_contract_id')->references('contract_id')->on('contract')->onDelete('cascade')->onUpdate('cascade');

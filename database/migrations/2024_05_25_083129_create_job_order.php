@@ -14,7 +14,8 @@ class createJobOrder extends Migration
     public function up()
     {
         Schema::create('job_order', function (Blueprint $table) {
-            $table->id('job_order_no');
+            $table->id('job_order_id');
+            $table->string('job_order_no');
             $table->text('location');
             $table->string('period_covered');
             $table->string('supplier');

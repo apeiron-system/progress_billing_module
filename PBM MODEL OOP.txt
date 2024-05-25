@@ -1,0 +1,77 @@
+MODEL OOP
+
+[HOW TO CALL THE MODELS AND FETCH THEIR DATA, CRUD, CALL REFERENCED TABLES]
+
+FETCH DATA:
+
+CRUD:
+
+CALL REFERENCED TABLES:
+// Fetch a JobOrder and its related Contract
+$jobOrder = JobOrder::find(1);
+$contract = $jobOrder->contract;
+
+// Fetch a Contract and its related JobOrders
+$contract = Contract::find(1);
+$jobOrders = $contract->jobOrders;
+
+// Fetch an ItemWorks and its related JobOrder and Contract
+$itemWorks = ItemWorks::find(1);
+$jobOrder = $itemWorks->jobOrder;
+$contract = $itemWorks->contract;
+
+// Fetch a JobOrder and its related ItemWorks
+$jobOrder = JobOrder::find(1);
+$equipmentNeeded = $jobOrder->itemWorks;
+
+// Fetch a Contract and its related ItemWorks
+$contract = Contract::find(1);
+$itemWorks = $contract->itemWorks;
+
+// Fetch an EquipmentNeeded and its related JobOrder and Contract
+$equipmentNeeded = EquipmentNeeded::find(1);
+$jobOrder = $equipmentNeeded->jobOrder;
+$contract = $equipmentNeeded->contract;
+
+// Fetch a JobOrder and its related EquipmentNeeded
+$jobOrder = JobOrder::find(1);
+$equipmentNeeded = $jobOrder->equipmentNeeded;
+
+// Fetch a Contract and its related EquipmentNeeded
+$contract = Contract::find(1);
+$equipmentNeeded = $contract->equipmentNeeded;
+
+// Fetch a JobOrderPart and its related JobOrder
+$jobOrderPart = JobOrderPart::find(1);
+$jobOrder = $jobOrderPart->jobOrder;
+
+// Fetch a JobOrder and its related JobOrderParts
+$jobOrder = JobOrder::find(1);
+$jobOrderParts = $jobOrder->jobOrderParts;
+
+
+// Fetch a JobOrderPayitem and its related JobOrder and JobOrderPart
+$jobOrderPayitem = JobOrderPayitem::find(1);
+$jobOrder = $jobOrderPayitem->jobOrder;
+$jobOrderPart = $jobOrderPayitem->jobOrderPart;
+
+// Fetch a JobOrder and its related JobOrderPayitems
+$jobOrder = JobOrder::find(1);
+$jobOrderPayitems = $jobOrder->jobOrderPayitems;
+
+// Fetch a JobOrderPart and its related JobOrderPayitems
+$jobOrderPart = JobOrderPart::find(1);
+$jobOrderPayitems = $jobOrderPart->jobOrderPayitems;
+
+// Fetch a JobOrderPayitem and its related JobOrder and JobOrderPart
+$jobOrderPayitem = JobOrderPayitem::find(1);
+$jobOrder = $jobOrderPayitem->jobOrder;
+$jobOrderPart = $jobOrderPayitem->jobOrderPart;
+
+// Fetch a JobOrder and its related JobOrderPayitems
+$jobOrder = JobOrder::find(1);
+$jobOrderPayitems = $jobOrder->jobOrderPayitems;
+
+// Fetch a JobOrderPart and its related JobOrderPayitems
+$jobOrderPart = JobOrderPart::find(1);
+$jobOrderPayitems = $jobOrderPart->jobOrderPayitems;

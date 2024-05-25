@@ -20,8 +20,8 @@ class CreateJobOrderPayitem extends Migration
             $table->string('equipment_name');
             $table->timestamps();
 
-            $table->unsignedBigInteger('pi_job_order_no');
-            $table->foreign('pi_job_order_no')->references('job_order_no')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('pi_job_order_id');
+            $table->foreign('pi_job_order_id')->references('job_order_id')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
 
             $table->unsignedBigInteger('pi_jo_part_id');
             $table->foreign('pi_jo_part_id')->references('part_id')->on('job_order_part')->onDelete('cascade')->onUpdate('cascade');
