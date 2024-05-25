@@ -19,8 +19,8 @@ class CreateJobOrderPart extends Migration
             $table->text('description');
             $table->timestamps();
 
-            $table->unsignedBigInteger('part_job_order_no');
-            $table->foreign('part_job_order_no')->references('job_order_no')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('part_job_order_id');
+            $table->foreign('part_job_order_id')->references('job_order_id')->on('job_order')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
